@@ -1,0 +1,2 @@
+seeded regressions caught: 6 of 40
+false pages across clean releases: 0 of 60

@@ -1,0 +1,13 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-6.2.5, py-1.10.0, pluggy-0.13.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /mnt/c/Users/Manas/Downloads/Auto Job Applier/Total Job Application process flow, configfile: pytest.ini
+plugins: colcon-core-0.21.0, cov-3.0.0
+collecting ... collected 4 items
+
+test_burnrate.py::test_clean_history_never_pages PASSED                  [ 25%]
+test_burnrate.py::test_a_severe_error_rate_blowout_pages PASSED          [ 50%]
+test_burnrate.py::test_a_mild_latency_blip_does_not_page PASSED          [ 75%]
+test_burnrate.py::test_a_severe_latency_spike_pages PASSED               [100%]
+
+============================== 4 passed in 0.05s ===============================

@@ -1,0 +1,3 @@
+self-check: 100000 samples round-trip exact
+compressed size: 730575 bytes (7.30575 bytes/sample, uncompressed would be 16)
+ingest benchmark: 2000000 samples in 0.1653s = 12099201 samples/sec, 7.96905 bytes/sample
