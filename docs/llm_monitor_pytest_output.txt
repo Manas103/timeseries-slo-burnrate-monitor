@@ -1,0 +1,22 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-9.1.1, pluggy-1.7.0 -- /mnt/c/Users/Manas/Downloads/Auto Job Applier/Total Job Application process flow/projects/timeseries-slo-burnrate-monitor/.venv_llm_monitor/bin/python
+cachedir: .pytest_cache
+rootdir: /mnt/c/Users/Manas/Downloads/Auto Job Applier/Total Job Application process flow
+configfile: pytest.ini
+collecting ... collected 13 items
+
+llm_monitor/tests/test_burnrate_window.py::test_sliding_window_matches_the_naive_reference_oracle_exactly PASSED [  7%]
+llm_monitor/tests/test_burnrate_window.py::test_clean_baseline_stream_never_pages PASSED [ 15%]
+llm_monitor/tests/test_burnrate_window.py::test_a_severe_degradation_eventually_pages PASSED [ 23%]
+llm_monitor/tests/test_burnrate_window.py::test_a_mild_degradation_never_pages PASSED [ 30%]
+llm_monitor/tests/test_degradations.py::test_exactly_twenty_degradation_scenarios PASSED [ 38%]
+llm_monitor/tests/test_degradations.py::test_baseline_ungrounded_rate_is_inside_the_error_budget PASSED [ 46%]
+llm_monitor/tests/test_degradations.py::test_every_degradation_is_worse_than_baseline PASSED [ 53%]
+llm_monitor/tests/test_prometheus_export.py::test_record_increments_requests_and_leaves_ungrounded_at_zero_for_a_grounded_request PASSED [ 61%]
+llm_monitor/tests/test_simulate.py::test_a_short_clean_run_pages_zero_times PASSED [ 69%]
+llm_monitor/tests/test_simulate.py::test_degradation_scenario_result_shape PASSED [ 76%]
+llm_monitor/tests/test_simulate.py::test_a_mild_scenario_is_honestly_reported_as_missed PASSED [ 84%]
+llm_monitor/tests/test_tracing.py::test_serve_request_produces_a_parent_span_and_three_named_child_spans PASSED [ 92%]
+llm_monitor/tests/test_tracing.py::test_serve_request_returns_metrics_consistent_with_the_spans PASSED [100%]
+
+============================== 13 passed in 2.42s ==============================

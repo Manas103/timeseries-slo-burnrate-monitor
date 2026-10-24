@@ -2,3 +2,11 @@ __pycache__/
 .pytest_cache/
 *.o
 codec_bench
+.venv_llm_monitor/
+
+# Terraform: regenerate with `terraform init && terraform apply` from terraform/;
+# .terraform.lock.hcl is the one Terraform-generated file that is committed.
+terraform/.terraform/
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
+terraform/generated/

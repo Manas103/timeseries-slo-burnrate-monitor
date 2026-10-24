@@ -1,0 +1,197 @@
+{
+  "clean": {
+    "requests": 14400,
+    "false_pages": 0,
+    "hours": 40
+  },
+  "degradation": {
+    "total": 20,
+    "caught": 18,
+    "missed": 2,
+    "median_detection_minutes": 6.916666666666666,
+    "all_latency_within_budget": true,
+    "all_cost_within_budget": true,
+    "results": [
+      {
+        "scenario": "DEG-01",
+        "description": "retrieval index rolled back to a stale snapshot, serving outdated passages",
+        "ungrounded_rate": 0.95,
+        "caught": true,
+        "detection_latency_s": 250.0,
+        "latency_within_budget": true,
+        "cost_within_budget": true
+      },
+      {
+        "scenario": "DEG-02",
+        "description": "reranker model silently downgraded to a weaker checkpoint on deploy",
+        "ungrounded_rate": 0.91,
+        "caught": true,
+        "detection_latency_s": 280.0,
+        "latency_within_budget": true,
+        "cost_within_budget": true
+      },
+      {
+        "scenario": "DEG-03",
+        "description": "retrieval top-k reduced from 5 to 1 by a misapplied config default",
+        "ungrounded_rate": 0.87,
+        "caught": true,
+        "detection_latency_s": 300.0,
+        "latency_within_budget": true,
+        "cost_within_budget": true
+      },
+      {
+        "scenario": "DEG-04",
+        "description": "model provider A/B-tested a cheaper model into 100% of traffic without a flag flip here",
+        "ungrounded_rate": 0.83,
+        "caught": true,
+        "detection_latency_s": 290.0,
+        "latency_within_budget": true,
+        "cost_within_budget": true
+      },
+      {
+        "scenario": "DEG-05",
+        "description": "prompt template regression dropped the system instruction block",
+        "ungrounded_rate": 0.8,
+        "caught": true,
+        "detection_latency_s": 280.0,
+        "latency_within_budget": true,
+        "cost_within_budget": true
+      },
+      {
+        "scenario": "DEG-06",
+        "description": "context window truncation silently drops the retrieved passage before the model call",
+        "ungrounded_rate": 0.76,
+        "caught": true,
+        "detection_latency_s": 380.0,
+        "latency_within_budget": true,
+        "cost_within_budget": true
+      },
+      {
+        "scenario": "DEG-07",
+        "description": "vector store reindex left half the corpus temporarily missing",
+        "ungrounded_rate": 0.72,
+        "caught": true,
+        "detection_latency_s": 420.0,
+        "latency_within_budget": true,
+        "cost_within_budget": true
+      },
+      {
+        "scenario": "DEG-08",
+        "description": "quantized model variant pinned in a rollback, trading fidelity for latency",
+        "ungrounded_rate": 0.68,
+        "caught": true,
+        "detection_latency_s": 360.0,
+        "latency_within_budget": true,
+        "cost_within_budget": true
+      },
+      {
+        "scenario": "DEG-09",
+        "description": "temperature parameter accidentally raised, increasing hallucination rate",
+        "ungrounded_rate": 0.64,
+        "caught": true,
+        "detection_latency_s": 400.0,
+        "latency_within_budget": true,
+        "cost_within_budget": true
+      },
+      {
+        "scenario": "DEG-10",
+        "description": "embedding model version mismatch between the index and the query path",
+        "ungrounded_rate": 0.6,
+        "caught": true,
+        "detection_latency_s": 410.0,
+        "latency_within_budget": true,
+        "cost_within_budget": true
+      },
+      {
+        "scenario": "DEG-11",
+        "description": "post-processing regex over-aggressively strips grounding citations",
+        "ungrounded_rate": 0.57,
+        "caught": true,
+        "detection_latency_s": 460.0,
+        "latency_within_budget": true,
+        "cost_within_budget": true
+      },
+      {
+        "scenario": "DEG-12",
+        "description": "cache layer serves a stale answer for a semantically new question",
+        "ungrounded_rate": 0.53,
+        "caught": true,
+        "detection_latency_s": 520.0,
+        "latency_within_budget": true,
+        "cost_within_budget": true
+      },
+      {
+        "scenario": "DEG-13",
+        "description": "fallback path silently engaged on primary-model timeout, answering ungrounded",
+        "ungrounded_rate": 0.49,
+        "caught": true,
+        "detection_latency_s": 480.0,
+        "latency_within_budget": true,
+        "cost_within_budget": true
+      },
+      {
+        "scenario": "DEG-14",
+        "description": "summarization step drops a key entity before the citation check",
+        "ungrounded_rate": 0.45,
+        "caught": true,
+        "detection_latency_s": 510.0,
+        "latency_within_budget": true,
+        "cost_within_budget": true
+      },
+      {
+        "scenario": "DEG-15",
+        "description": "safety filter over-triggers and returns a hedge/non-answer scored as ungrounded",
+        "ungrounded_rate": 0.4,
+        "caught": true,
+        "detection_latency_s": 600.0,
+        "latency_within_budget": true,
+        "cost_within_budget": true
+      },
+      {
+        "scenario": "DEG-16",
+        "description": "translation layer subtly alters factual content for non-English requests",
+        "ungrounded_rate": 0.35,
+        "caught": true,
+        "detection_latency_s": 1690.0,
+        "latency_within_budget": true,
+        "cost_within_budget": true
+      },
+      {
+        "scenario": "DEG-17",
+        "description": "feature flag flipped an experimental prompt variant to full traffic",
+        "ungrounded_rate": 0.3,
+        "caught": true,
+        "detection_latency_s": 1930.0,
+        "latency_within_budget": true,
+        "cost_within_budget": true
+      },
+      {
+        "scenario": "DEG-18",
+        "description": "rate-limit fallback serves a cached generic answer under load",
+        "ungrounded_rate": 0.25,
+        "caught": true,
+        "detection_latency_s": 2520.0,
+        "latency_within_budget": true,
+        "cost_within_budget": true
+      },
+      {
+        "scenario": "DEG-19",
+        "description": "a minor retrieval ranking regression slightly favors a weaker passage",
+        "ungrounded_rate": 0.08,
+        "caught": false,
+        "detection_latency_s": null,
+        "latency_within_budget": true,
+        "cost_within_budget": true
+      },
+      {
+        "scenario": "DEG-20",
+        "description": "a single reranker feature was dropped in a refactor, a small, genuinely subtle regression",
+        "ungrounded_rate": 0.05,
+        "caught": false,
+        "detection_latency_s": null,
+        "latency_within_budget": true,
+        "cost_within_budget": true
+      }
+    ]
+  }
+}
